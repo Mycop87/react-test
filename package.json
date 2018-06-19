@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "magick": "webpack"
+    "start": "webpack"
   },
   "author": "George",
   "license": "ISC",
@@ -17,13 +17,13 @@
     "react-dom": "^16.4.1",
     "react-router-dom": "^4.3.1",
     "style-loader": "^0.21.0",
-    "ts-loader": "^4.4.1",
-    "webpack": "3.9.1"
+    "ts-loader": "^4.4.1"
   },
   "devDependencies": {
     "awesome-typescript-loader": "^4.0.0",
     "source-map-loader": "^0.2.3",
     "typescript": "^2.9.2",
+    "webpack": "^3.9.1",
     "webpack-command": "^0.2.1"
   }
 }
