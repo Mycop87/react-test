@@ -23,13 +23,6 @@ export class NewList extends React.Component<NewListProps, NewListState> {
         this.handleCheck = this.handleCheck.bind(this);
     }
 
-
-    componentWillReceiveProps(nextProps) {
-        this.setState({
-            tasks: nextProps.tasks
-        });
-    }
-
     handleCheck(event, task) {
         this.props.check(event, task);
     }
