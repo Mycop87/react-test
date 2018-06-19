@@ -1,0 +1,10 @@
+.done-list{
+    width:300px;
+}
+.done-list ul{
+    display: inline-block;
+}
+.done-list input{
+    float:right;
+    margin-top: 20px;
+}
