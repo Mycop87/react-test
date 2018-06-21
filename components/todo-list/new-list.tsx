@@ -1,47 +1,25 @@
 import * as React from "react";
-import {Task} from '../../interfaces/task'
 
-interface NewListProps {
-    tasks: Array<Task>;
-    check: any;
-}
+export const NewList = (props) => {
 
-interface NewListState {
-    tasks?: Array<Task>;
-}
-
-
-export class NewList extends React.Component<NewListProps, NewListState> {
-
-    constructor(props: NewListProps) {
-        super(props);
-
-        this.state = {
-            tasks: props.tasks
-        };
-
-        this.handleCheck = this.handleCheck.bind(this);
+    const handleCheck = (event, task) => {
+        props.check(event, task);
     }
 
-    handleCheck(event, task) {
-        this.props.check(event, task);
-    }
-
-    private getList = () => {
-        return this.state.tasks.map(task =>
+    const getList = () => {
+        return props.tasks.map(task =>
             <li key={task.id}>
                 <input type="checkbox"
                        checked={task.done}
-                       onChange={(ev) => this.handleCheck(ev, task)}
+                       onChange={(ev) => handleCheck(ev, task)}
                 />
                 <label>{task.name}</label>
             </li>
         )
     }
 
-    render() {
-        return (
-            <ul>{this.getList()}</ul>
-        );
-    }
+
+    return (
+        <ul>{getList()}</ul>
+    );
 }
