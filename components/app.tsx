@@ -6,8 +6,6 @@ import {PropsRoute} from "./utils/props-route";
 import {ProjectList} from '../resources/projects';
 import {TaskList} from '../resources/tasks';
 import {Task} from '../interfaces/task'
-import {Project} from '../interfaces/project'
-
 
 interface TodoListProps {
 }
