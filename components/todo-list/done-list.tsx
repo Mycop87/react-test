@@ -1,5 +1,4 @@
 import * as React from "react";
-import {Task} from '../../interfaces/task'
 import './style.css'
 
 export const DoneList = (props:any) => {
